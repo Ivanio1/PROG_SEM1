@@ -1,0 +1,23 @@
+@startuml
+class Pokemon
+class Komala
+Komala : Komala()
+class Marshtomp
+Marshtomp : Marshtomp()
+class Mudkip
+Mudkip : Mudkip()
+class Starmie
+Starmie : Starmie()
+class Staryu
+Staryu : Staryu()
+class Swampert
+Swampert : Swampert()
+
+Pokemon --> Komala
+Pokemon --> Staryu
+Pokemon --> Mudkip
+Staryu --> Starmie
+Mudkip --> Marshtomp
+Marshtomp --> Swampert
+
+@enduml

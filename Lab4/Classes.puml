@@ -1,0 +1,57 @@
+@startuml
+abstract class Person
+Person : walk()
+Person : abstract grab()
+Person : abstract pour()
+Person : abstract laugh()
+Person : abstract jump()
+class Karlson
+Karlson : burn()
+Karlson : @Override grab()
+Karlson : @Override pour()
+Karlson : @Override hashcode()
+class BabyBoy
+BabyBoy : @Override jump()
+BabyBoy : @Override laugh()
+BabyBoy : @Override toString()
+BabyBoy : @Override equals()
+Karlson --|> Person
+BabyBoy --|> Person
+interface be_afraid
+be_afraid .. BabyBoy
+interface be_the_greatest
+be_the_greatest .. Karlson
+class Story
+Story : main()
+class Denaturat
+Denaturat : conditioin()
+Denaturat -- Karlson
+class Flame_boys
+Flame_boys : danse()
+Flame_boys -- Denaturat
+class Bottle
+Bottle : full()
+Bottle .. Denaturat
+class Spirtovka
+Spirtovka .. Denaturat
+class Room
+Room : add_item()
+class Car
+Room --+ Car
+Room --+ Spirtovka
+Enum car_status
+car_status : stand
+car_status : go
+car_status -- Car
+
+@enduml@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml

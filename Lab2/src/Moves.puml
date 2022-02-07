@@ -1,0 +1,69 @@
+@startuml
+class Blizzard
+Blizzard : Blizzard()
+Blizzard : #describe()
+Blizzard : #applyOppEffects(Pokemon p)
+class Bubble_Beam
+Bubble_Beam : Bubble_Beam()
+Bubble_Beam : #describe()
+Bubble_Beam : #applyOppEffects(Pokemon p)
+class Dazzling_Gleam
+Dazzling_Gleam : Dazzling_Gleam()
+Dazzling_Gleam : #describe()
+class Dragon_Dance
+Dragon_Dance : Dragon_Dance()
+Dragon_Dance : #describe()
+Dragon_Dance : #applySelfEffects(Pokemon p)
+class Energy_Ball
+Energy_Ball : Energy_Ball()
+Energy_Ball : #describe()
+Energy_Ball : #applyOppEffects(Pokemon p)
+class Facade
+Facade : Facade()
+Facade : #describe()
+Facade : applyOppDamage(Pokemon def, double damage)
+class Focus_Energy
+Focus_Energy : Focus_Energy()
+Focus_Energy : #describe()
+Focus_Energy : #applySelfEffects(Pokemon p)
+class Poison_Sting
+Poison_Sting : Poison_Sting()
+Poison_Sting : #describe()
+Poison_Sting : #applyOppEffects(Pokemon p)
+class Rest
+Rest : Rest()
+Rest : #describe()
+Rest : #applySelfEffects(Pokemon p)
+class Swagger
+Swagger : Swagger()
+Swagger : #describe()
+Swagger : #applyOppEffects(Pokemon p)
+class Thunderbolt
+Thunderbolt : Thunderbolt()
+Thunderbolt : #describe()
+Thunderbolt : #applyOppEffects(Pokemon p)
+class Waterfall
+Waterfall : Waterfall()
+Waterfall : #describe()
+Waterfall : #applyOppEffects(Pokemon p)
+class Move
+class SpecialMove
+class PhysicalMove
+class StatusMove
+Move --> StatusMove
+Move --> PhysicalMove
+Move --> SpecialMove
+StatusMove --> Dragon_Dance
+StatusMove --> Focus_Energy
+StatusMove --> Rest
+StatusMove --> Swagger
+SpecialMove --> Blizzard
+SpecialMove --> Bubble_Beam
+SpecialMove --> Dazzling_Gleam
+SpecialMove -->Energy_Ball
+SpecialMove --> Thunderbolt
+PhysicalMove --> Facade
+PhysicalMove --> Poison_Sting
+PhysicalMove --> Waterfall
+
+@enduml

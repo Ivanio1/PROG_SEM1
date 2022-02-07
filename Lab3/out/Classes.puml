@@ -1,0 +1,110 @@
+@startuml
+abstract class Person
+Person : walk()
+Person : abstract kneel_down()
+Person : abstract stand()
+Person : abstract waiting()
+Person : abstract look_at()
+Person : abstract grab()
+Person : abstract pour()
+Person : abstract laugh()
+Person : abstract jump()
+Person : @Override toString()
+class Karlson
+Karlson : int height
+Karlson : int Speed
+Karlson : burn()
+Karlson : fly()
+Karlson : fly_around()
+Karlson : walk_to()
+Karlson : go_through_window()
+Karlson : change_hieght()
+Karlson : change_speed()
+Karlson : make_circles()
+Karlson : eyes_glittered()
+Karlson : @Override kneel_down()
+Karlson : @Override look_at()
+Karlson : @Override grab()
+Karlson : @Override pour()
+Karlson : @Override hashcode()
+class BabyBoy
+BabyBoy : fight_fire()
+BabyBoy : @Override jump()
+BabyBoy : @Override waiting()
+BabyBoy : @Override stand()
+BabyBoy : @Override grab()
+BabyBoy : @Override laugh()
+
+
+Karlson --|> Person
+BabyBoy --|> Person
+class goosebumps
+goosebumps : run()
+goosebumps .. goosebumps_place
+goosebumps -- BabyBoy
+enum goosebumps_place
+goosebumps_place : back
+goosebumps_place : legs
+goosebumps_place : arms
+goosebumps_place : stomach
+interface be_afraid
+interface be_afraid_of_fire
+be_afraid .. BabyBoy
+be_afraid_of_fire .. BabyBoy
+interface took_a_breath_away
+took_a_breath_away .. BabyBoy
+interface be_the_greatest
+interface look_proud
+look_proud .. Karlson
+be_the_greatest .. Karlson
+class Story
+Story : main()
+class Denaturat
+Denaturat : conditioin()
+Denaturat -- Karlson
+class Flame_boys
+Flame_boys : danse()
+Flame_boys -- Denaturat
+class Bottle
+Bottle : full()
+Bottle .. Denaturat
+class Spirtovka
+Spirtovka .. Denaturat
+class house
+house : add_item()
+house --+ Room
+house : class roof
+house : @Override hashcode
+house : class pipe
+class Window
+
+class rag
+rag --BabyBoy
+class Room
+Room : add_item()
+Room : @Override equals()
+
+Car .. be_the_greatest
+class Car
+Car : setStatus(Car_status status)
+Car : getStatus()
+Car : procces(Car car)
+
+Room --+ Car
+Room --+ rag
+Room --+ Spirtovka
+Room --+ Window
+
+enum car_status
+car_status : stand
+car_status : work
+car_status .. Car
+class Exception
+class KarlsonIsNotReadyToFly
+class WrongSpeed
+Exception --|> KarlsonIsNotReadyToFly
+Exception --|> WrongSpeed
+class big_ugly_spots
+big_ugly_spots : be_on_surface()
+
+@enduml
